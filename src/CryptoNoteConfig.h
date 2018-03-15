@@ -40,9 +40,9 @@ namespace parameters {
 #define GENESIS_BLOCK_REWARD                            1000000
 
 #define CRYPTONOTE_REWARD_BLOCKS_WINDOW                 100
-#define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE       100000
-#define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2    100000
-#define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1    100000
+#define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE       10000
+#define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2    20000
+#define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1    10000
 #define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE
 #define CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE          600
 #define CRYPTONOTE_MONEY_DECIMAL_POINT                  8
@@ -54,21 +54,21 @@ namespace parameters {
 #define ALLOY_TRANSACTION_SIZE_LIMIT                    50000
 #define MEMPOOL_POLLING_INTERVAL                        60
 
-#define DIFFICULTY_TARGET                               60
+#define DIFFICULTY_TARGET                               120
 #define EXPECTED_NUMBER_OF_BLOCKS_PER_DAY               24 * 60 * 60 / DIFFICULTY_TARGET
-#define DIFFICULTY_WINDOW                               17
-#define DIFFICULTY_WINDOW_V1                            1440
-#define DIFFICULTY_WINDOW_V2                            1440
-#define DIFFICULTY_WINDOW_V4                            1440
-#define DIFFICULTY_CUT                                  0
+#define DIFFICULTY_WINDOW                               EXPECTED_NUMBER_OF_BLOCKS_PER_DAY
+#define DIFFICULTY_WINDOW_V1                            EXPECTED_NUMBER_OF_BLOCKS_PER_DAY
+#define DIFFICULTY_WINDOW_V2                            EXPECTED_NUMBER_OF_BLOCKS_PER_DAY
+#define DIFFICULTY_WINDOW_V4                            EXPECTED_NUMBER_OF_BLOCKS_PER_DAY
+#define DIFFICULTY_CUT                                  60
 #define DIFFICULTY_CUT_V1                               60
 #define DIFFICULTY_CUT_V2                               60
 #define DIFFICULTY_LAG                                  15
 #define DIFFICULTY_LAG_V1                               15
 #define DIFFICULTY_LAG_V2                               15
 
-#define MAX_BLOCK_SIZE_INITIAL                          100000
-#define MAX_BLOCK_SIZE_GROWTH_SPEED_NUMERATOR           100000
+#define MAX_BLOCK_SIZE_INITIAL                          20 * 1024
+#define MAX_BLOCK_SIZE_GROWTH_SPEED_NUMERATOR           100 * 1024
 #define MAX_BLOCK_SIZE_GROWTH_SPEED_DENOMINATOR         365 * 24 * 60 * 60 / DIFFICULTY_TARGET
 
 #define CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_BLOCKS       1
@@ -82,9 +82,9 @@ namespace parameters {
 #define FUSION_TX_MIN_IN_OUT_COUNT_RATIO                4
 
 #define KEY_IMAGE_CHECKING_BLOCK_INDEX                  0
-#define UPGRADE_HEIGHT_V2                               1
-#define UPGRADE_HEIGHT_V3                               2
-#define UPGRADE_HEIGHT_V4                               3
+#define UPGRADE_HEIGHT_V2                               500000
+#define UPGRADE_HEIGHT_V3                               500010
+#define UPGRADE_HEIGHT_V4                               500010
 
 #define UPGRADE_VOTING_THRESHOLD                        90
 #define UPGRADE_VOTING_WINDOW                           EXPECTED_NUMBER_OF_BLOCKS_PER_DAY
@@ -107,15 +107,15 @@ namespace parameters {
 #define BLOCK_MAJOR_VERSION_1                           1
 #define BLOCK_MAJOR_VERSION_2                           2
 #define BLOCK_MAJOR_VERSION_3                           3
-#define BLOCK_MAJOR_VERSION_4                           4
-#define BLOCK_MAJOR_VERSION_5                           5
+#define BLOCK_MAJOR_VERSION_4                           0
+#define BLOCK_MAJOR_VERSION_5                           1
 
 
 #define BLOCK_MINOR_VERSION_0                           0
 #define BLOCK_MINOR_VERSION_1                           1
 
-#define BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT          20000
-#define BLOCKS_SYNCHRONIZING_DEFAULT_COUNT              4096
+#define BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT          10000
+#define BLOCKS_SYNCHRONIZING_DEFAULT_COUNT              100
 #define COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT           1000
 
 #define P2P_DEFAULT_PORT                                28825
