@@ -9,7 +9,7 @@ Portions Copyright (c) 2012-2017, The CryptoNote Developers, The Bytecoin Develo
 
 ```sudo apt-get -y install gcc-4.8 g++-4.8  git cmake```
 
-```git clone https://github.com/antcnews/Nirvana```
+```git clone https://github.com/altcnews/Nirvana```
 
 ```cd Nirvana```
 
