@@ -1,6 +1,7 @@
 # Nirvana
 
 Copyright (c) 2017-2018, The Nirvana Developers.   
+Copyright (c) 2017-2018, The Alloy Developers.
 Portions Copyright (c) 2012-2017, The CryptoNote Developers, The Bytecoin Developers.
 
 # How to Compile
