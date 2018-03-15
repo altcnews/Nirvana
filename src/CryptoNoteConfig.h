@@ -51,7 +51,7 @@ namespace parameters {
 #define DEFAULT_FEE                                     (uint64_t)pow(10, CRYPTONOTE_MONEY_DECIMAL_POINT)
 #define DEFAULT_DUST_THRESHOLD                          MINIMUM_FEE
 
-#define NIRVANA_TRANSACTION_SIZE_LIMIT                  50000
+#define ALLOY_TRANSACTION_SIZE_LIMIT                  50000
 #define MEMPOOL_POLLING_INTERVAL                        60
 
 #define DIFFICULTY_TARGET                               60
