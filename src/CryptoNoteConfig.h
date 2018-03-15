@@ -22,10 +22,10 @@ namespace parameters {
 #define CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                  500000000
 #define CRYPTONOTE_MAX_TX_SIZE                          1000000000
 #define CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX         9898 // starts with "VV"
-#define CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW            30
+#define CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW            10
 #define CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT              60 * 60 * 2
 
-#define BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW               60
+#define BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW               15
 
 #define MONEY_SUPPLY                                    1000000000
 #define MIN_MIXIN                                       0
@@ -51,7 +51,7 @@ namespace parameters {
 #define DEFAULT_FEE                                     (uint64_t)pow(10, CRYPTONOTE_MONEY_DECIMAL_POINT)
 #define DEFAULT_DUST_THRESHOLD                          MINIMUM_FEE
 
-#define ALLOY_TRANSACTION_SIZE_LIMIT                    50000
+#define NIRVANA_TRANSACTION_SIZE_LIMIT                  50000
 #define MEMPOOL_POLLING_INTERVAL                        60
 
 #define DIFFICULTY_TARGET                               60
@@ -82,10 +82,9 @@ namespace parameters {
 #define FUSION_TX_MIN_IN_OUT_COUNT_RATIO                4
 
 #define KEY_IMAGE_CHECKING_BLOCK_INDEX                  0
-#define UPGRADE_HEIGHT_V2                               1
-#define UPGRADE_HEIGHT_V3                               2
+#define UPGRADE_HEIGHT_V2                               50000
+#define UPGRADE_HEIGHT_V3                               4294967294
 #define UPGRADE_HEIGHT_V4                               17500
-#define UPGRADE_HEIGHT_V5                               99999999999999999999
 
 #define UPGRADE_VOTING_THRESHOLD                        90
 #define UPGRADE_VOTING_WINDOW                           EXPECTED_NUMBER_OF_BLOCKS_PER_DAY
@@ -119,8 +118,8 @@ namespace parameters {
 #define BLOCKS_SYNCHRONIZING_DEFAULT_COUNT              4096
 #define COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT           1000
 
-#define P2P_DEFAULT_PORT                                16335
-#define RPC_DEFAULT_PORT                                16336
+#define P2P_DEFAULT_PORT                                12775
+#define RPC_DEFAULT_PORT                                12776
 
 #define P2P_LOCAL_WHITE_PEERLIST_LIMIT                  1000
 #define P2P_LOCAL_GRAY_PEERLIST_LIMIT                   5000
@@ -138,8 +137,8 @@ namespace parameters {
 #define P2P_STAT_TRUSTED_PUB_KEY                        "8f80f9a5a434a9f1510d13336228debfee9c918ce505efe225d8c94d045fa115"
 
 const std::initializer_list<const char*> SEED_NODES {
-   "45.77.248.163:16335",
-  "104.238.157.86:16335",
+   "45.77.248.163:12775",
+  "104.238.157.86:12775",
 
 };
 
